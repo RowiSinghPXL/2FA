@@ -1,0 +1,55 @@
+﻿
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+</div>
+
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <h1>Info 2FA</h1>
+            <div id="qrcode"></div>
+            
+        </div>
+        <div class="col-md-4 .offset-md-4">
+            
+        </div>
+        <div class="col-md-4">
+            <h1>Pxl</h1>
+            <div id="qrcodePXL"></div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+@section Scripts {
+    <script type="text/javascript" src="~/lib/davidshimjs-qrcodejs-04f46c6/qrcode.js"></script>
+
+    <script type="text/javascript">
+        new QRCode(document.getElementById("qrcode"), "https://www.google.com/search?q=what+is+2FA");
+    </script>
+
+    <script type="text/javascript">
+        new QRCode(document.getElementById("qrcodePXL"), "https://www.pxl.be/");
+    </script>
+
+}
